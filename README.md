@@ -140,4 +140,14 @@ python run_distill.py \
        --num_warmup_steps=20000 
 ```
 
+## Answers
+
+- **Why didn't you use Albert to be the student model?**
+
+This is my first run distillation model, the first purpose of mine was I wanted to improve the performance of Roberta base model, because in the public comparisons, the Roberta base is the best Bert base model, so I wanted to train a better Roberta base model. **After I finish the training, my TPU just expired**, so I stopped my training.
+
+- **Do you have another distilled plans?**
+
+Yes, I have, my future plan is use albert to the student model, use different loss function etc.
+
 
