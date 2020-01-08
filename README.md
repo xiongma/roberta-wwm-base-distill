@@ -22,9 +22,9 @@ I just support BaiduYun to down this model, this link is below.
 
 To train this model, I used 2 steps.
 
-1. I used roberta_ext_wwm_large model to get all examples tokens' output.
+- I used roberta_ext_wwm_large model to get all examples tokens' output.
 
-2. I used the output to train the model, which inited roberta_ext_wwm_base pretrain model weights.
+- I used the output to train the model, which inited roberta_ext_wwm_base pretrain model weights.
 
 ### Dataset
 
