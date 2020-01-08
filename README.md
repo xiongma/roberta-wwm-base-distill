@@ -1,10 +1,10 @@
 # A Roberta-ext-wwm-base Distillation Model
 
-This is a chinese Roberta wwm distillation model which was distilled from roberta-ext-wwm-large by roberta-ext-wwm-large. The large model and base model are from this [github]([https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)), thanks for his contribution.
+This is a chinese Roberta wwm distillation model which was distilled from roberta-ext-wwm-large by roberta-ext-wwm-large. The large model and base model are from this [github](https://github.com/ymcui/Chinese-BERT-wwm), thanks for his contribution.
 
 ## Based On
 
-This model was trained based on this [paper](https://arxiv.org/abs/1910.01108)), which was pushed by huggingfaace.
+This model was trained based on this [paper](https://arxiv.org/abs/1910.01108), which was punished by huggingface.
 
 ## Corpus
 
