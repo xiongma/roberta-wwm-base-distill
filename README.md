@@ -20,6 +20,12 @@ I just BaiduYun to down this model, this link is below.
 
 ## Train Detail
 
+To train this model, I used 2 steps.
+
+1. I used roberta_ext_wwm_large model to get all examples tokens' output.
+
+2. I used the output to train the model, which inited roberta_ext_wwm_base pretrain model weights.
+
 ### Dataset
 
 - I just used 5 different ways to mask one sentence, not dynamic mask.
@@ -43,7 +49,7 @@ I just BaiduYun to down this model, this link is below.
 | training step | 1M    |
 | warming step  | 2W    |
 
-## Comprasion
+## Comparison
 
 In this part, every task I just ran one time, the result is below.
 
@@ -56,11 +62,13 @@ In this part, every task I just ran one time, the result is below.
 
 ### SQUAD
 
-| Model                                 | CMRC dev    |
-|:-------------------------------------:|:-----------:|
-| Roberta-wwm-ext-base, Chinese         | 84.72/65.24 |
-| Roberta-wwm-ext-base-distill, Chinese | 85.2        |
+| Model                                 | CMRC2018 dev    |
+|:-------------------------------------:|:---------------:|
+| Roberta-wwm-ext-base, Chinese         | 84.72/**65.24** |
+| Roberta-wwm-ext-base-distill, Chinese | **85.2**/65.20  |
 
-In this part you could ask, your comprasion is different with this [github]([https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)), I don't why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters, but as you can see,  in the same situation, the distilled model has improvement.
+In this part you could ask, your comparison is different with this [github]([https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
+
+But as you can see,  in the same situation, the distilled model has improvement than the original model.
 
 
