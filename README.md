@@ -4,11 +4,11 @@ This is a chinese Roberta wwm distillation model which was distilled from robert
 
 ## Based On
 
-This model was trained based on this [paper]([https://arxiv.org/abs/1910.01108](https://arxiv.org/abs/1910.01108)), which was pushed by huggingfaace.
+This model was trained based on this [paper](https://arxiv.org/abs/1910.01108)), which was pushed by huggingfaace.
 
 ## Corpus
 
-For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. this data can be found in this [github]([https://github.com/brightmart/nlp_chinese_corpus](https://github.com/brightmart/nlp_chinese_corpus))
+For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. this data can be found in this [github](https://github.com/brightmart/nlp_chinese_corpus)
 
 ## Model Download
 
