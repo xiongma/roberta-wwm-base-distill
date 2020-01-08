@@ -12,7 +12,7 @@ For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. 
 
 ## Model Download
 
-I just BaiduYun to down this model, this link is below.
+I just support BaiduYun to down this model, this link is below.
 
 | Model                                 | BaiduYun                                                      |
 |:-------------------------------------:|:-------------------------------------------------------------:|
