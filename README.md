@@ -12,7 +12,7 @@ For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. 
 
 ## Model Download
 
-I just BaiduYun to down this model, this link is below.
+I just support BaiduYun to down this model, this link is below.
 
 | Model                                 | BaiduYun                                                      |
 |:-------------------------------------:|:-------------------------------------------------------------:|
@@ -70,3 +70,74 @@ In this part, every task I just ran one time, the result is below.
 In this part you could ask, your comparison is different with this [github](https://github.com/ymcui/Chinese-BERT-wwm), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
 
 But as you can see,  in the same situation, the distilled model has improvement than the original model.
+
+## How To Train
+
+- **create pretraining data**
+
+```python
+export DATA_DIR=YOUR_DATA_DIR
+export OUTPUT_DIR=YOUR_OUTPUT_DIR
+export VOCAB_FILE=YOUR_VOCAB_FILE
+
+python create_pretraining_data.py \
+        --input_dir=$DATA_DIR\
+        --output_dir=$OUTPUT_DIR \
+
+        --vocab_file=$YOUR_VOCAB_FILE \
+        --do_whole_word_mask=True \
+        --ramdom_next=True \
+        --max_seq_length=512 \
+
+        --max_predictions_per_seq=20 \
+        --random_seed=12345 \
+        --dupe_factor=5 \
+        --masked_lm_prob=0.15 \
+        --doc_stride=256 \
+        --max_workers=2 \
+        --short_seq_prob=0.1
+```
+
+- **create teacher output data**
+
+```python
+export TF_RECORDS=YOUR_PRETRAINING_TF_RECORDS
+export TEACHER_MODEL=YOUR_TEACHER_MODEL_DIR
+export OUTPUT_DIR=YOUR_OUTPUT_DIR
+
+python create_teacher_output_data.py \
+       --bert_config_file=$TEACHER_MODEL/bert_config.json \
+       --input_file=$TF_RECORDS \
+       --output_dir=$YOUR_OUTPUT_DIR \
+       --truncation_factor=128 \
+       --init_checkpoint=$TEACHER_MODEL\bert_model.ckpt \
+       --max_seq_length=512 \
+       --max_predictions_per_seq=20 \
+       --predict_batch_size=64 
+       
+```
+
+- **run distill**
+
+```python
+export TF_RECORDS=YOUR_TEACHER_OUTPUT_TF_RECORDS
+export STUDENT_MODEL_DIR=YOUR_STUDENT_MODEL_DIR
+export OUTPUT_DIR=YOUR_OUTPUT_DIR
+
+python run_distill.py \
+       --bert_config_file=$STUDENT_MODEL_DIR\bert_config.json \
+       --input_file=$TF_RECORDS \
+       --output_dir=$OUTPUT_DIR \
+       --init_checkpoint=$STUDENT_MODEL_DIR\bert_model.ckpt
+       --truncation_factor=128 \
+       --max_seq_length=512 \
+       --max_predictions_per_seq=20 \
+       --do_train=True \
+       --do_eval=True \
+       --train_batch_size=384 \
+       --eval_batch_size=1024 \
+       --num_train_steps=1000000 \
+       --num_warmup_steps=20000 
+```
+
+
