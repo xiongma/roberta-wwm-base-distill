@@ -12,7 +12,7 @@ For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. 
 
 ## Model Download
 
-I just support BaiduYun to down this model, this link is below.
+I just BaiduYun to down this model, this link is below.
 
 | Model                                 | BaiduYun                                                      |
 |:-------------------------------------:|:-------------------------------------------------------------:|
@@ -32,7 +32,7 @@ I just support BaiduYun to down this model, this link is below.
 
 ### Student Model
 
-- **Loss**: In this training, I use 2 loss functions, first is cross entropy, second is cosin loss, add them together, I think it has a big improvment if I use another loss function, but I didn't have too much resource to train this model, because my free Google TPU expired.
+- **Loss**: In this training, I use 2 loss functions, first is cross entropy, second is cosin loss, add them together, I think it has a big improvement if I use another loss function, but I didn't have too much resource to train this model, because my free Google TPU expired.
 
 - **Other parameters**
 
@@ -60,5 +60,7 @@ In this part, every task I just ran one time, the result is below.
 |:-------------------------------------:|:-----------:|
 | Roberta-wwm-ext-base, Chinese         | 84.72/65.24 |
 | Roberta-wwm-ext-base-distill, Chinese | 85.2        |
+
+In this part you could ask, your comprasion is different with this [github]([https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)), I don't why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters, but as you can see,  in the same situation, the distilled model has improvement.
 
 
