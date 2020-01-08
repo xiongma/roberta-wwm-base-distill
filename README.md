@@ -40,9 +40,9 @@ To train this model, I used 2 steps.
 
 - **Loss**: In this training, I use 2 loss functions, first is cross entropy, second is cosin loss, add them together, I think it has a big improvement if I use another loss function, but I didn't have too much resource to train this model, because my free Google TPU expired.
 
-- **Other parameters**
+- **Other Parameters**
 
-| parameter     | Value |
+| Parameter     | Value |
 |:-------------:|:-----:|
 | batch size    | 384   |
 | learning rate | 5e-5  |
@@ -62,10 +62,10 @@ In this part, every task I just ran one time, the result is below.
 
 ### SQUAD
 
-| Model                                 | CMRC2018 dev    |
-|:-------------------------------------:|:---------------:|
-| Roberta-wwm-ext-base, Chinese         | 84.72/**65.24** |
-| Roberta-wwm-ext-base-distill, Chinese | **85.2**/65.20  |
+| Model                                 | CMRC2018 dev (F1/EM) |
+|:-------------------------------------:|:--------------------:|
+| Roberta-wwm-ext-base, Chinese         | 84.72%/**65.24%**    |
+| Roberta-wwm-ext-base-distill, Chinese | **85.2%**/65.20%     |
 
 In this part you could ask, your comparison is different with this [github](https://github.com/ymcui/Chinese-BERT-wwm), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
 
