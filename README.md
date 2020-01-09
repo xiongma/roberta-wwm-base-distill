@@ -83,7 +83,6 @@ export VOCAB_FILE=YOUR_VOCAB_FILE
 python create_pretraining_data.py \
         --input_dir=$DATA_DIR\
         --output_dir=$OUTPUT_DIR \
-
         --vocab_file=$YOUR_VOCAB_FILE \
         --do_whole_word_mask=True \
         --ramdom_next=True \
