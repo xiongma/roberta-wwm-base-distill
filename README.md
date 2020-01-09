@@ -88,7 +88,6 @@ python create_pretraining_data.py \
         --do_whole_word_mask=True \
         --ramdom_next=True \
         --max_seq_length=512 \
-
         --max_predictions_per_seq=20 \
         --random_seed=12345 \
         --dupe_factor=5 \
@@ -148,6 +147,6 @@ This is my first run distillation model, the first purpose of mine was I wanted 
 
 - **Do you have another distilled plans?**
 
-Yes, I have, my future plan is use albert to the student model, use different loss function etc.
+Yes, I have, my future plan is use albert or half layers of roberta to the student model, use different loss function etc.
 
 
