@@ -139,11 +139,9 @@ python run_distill.py \
 
 ## Answers
 
-- We need a small size one, your model are still base size.
+- **We need a small size one, your model are still base size.**
 1. The purpose of punish this model is to identify feasibility of ditilled of method.
 
 2.  As you can see, this distilled method can improve the accuracy,
 
 3.  So I keep using this method to train a small size one, and I will punish it **around 2020.01.20**.
-
-
