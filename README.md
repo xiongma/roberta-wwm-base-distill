@@ -112,7 +112,6 @@ python create_teacher_output_data.py \
        --max_seq_length=512 \
        --max_predictions_per_seq=20 \
        --predict_batch_size=64 
-       
 ```
 
 - **run distill**
@@ -140,12 +139,11 @@ python run_distill.py \
 
 ## Answers
 
-- **Why didn't you use Albert to be the student model?**
+- We need a small size one, your model are still base size.
+1. The purpose of punish this model is to identify feasibility of ditilled of method.
 
-This is my first run distillation model, the first purpose of mine was I wanted to improve the performance of Roberta base model, because in the public comparisons, the Roberta base is the best Bert base model, so I wanted to train a better Roberta base model. **After I finish the training, my TPU just expired**, so I stopped my training.
+2.  As you can see, this distilled method can improve the accuracy,
 
-- **Do you have another distilled plans?**
-
-Yes, I have, my future plan is use albert or half layers of roberta to the student model, use different loss function etc.
+3.  So I keep using this method to train a small size one, and I will punish it **around 2020.01.20**.
 
 
