@@ -63,7 +63,7 @@ In this part, every task I just ran one time, the result is below.
 | Model                                 | LCQMC dev | LCQMC test |
 |:-------------------------------------:|:---------:|:----------:|
 | Roberta-wwm-ext-base, Chinese         | 89%       | 86.5%      |
-| Roberta-wwm-ext-base-distill, Chinese | 89%       | 87.2%      |
+| Roberta-wwm-ext-base-distill, Chinese | 89%       | **87.2%**  |
 
 ### SQUAD
 
