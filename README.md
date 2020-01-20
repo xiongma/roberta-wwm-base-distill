@@ -14,9 +14,10 @@ For train this model, I used baike_qa2019, news2016_zh,  webtext_2019, wiki_zh. 
 
 I just support BaiduYun to down this model, this link is below.
 
-| Model                                 | BaiduYun                                                      |
-|:-------------------------------------:|:-------------------------------------------------------------:|
-| Roberta-wwm-ext-base-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1R3f1nREQ4qKiloiZn2gFbQ) |
+| Model                                    | BaiduYun                                                      |
+|:----------------------------------------:|:-------------------------------------------------------------:|
+| Roberta-wwm-ext-base-distill, Chinese    | [Tensorflow](https://pan.baidu.com/s/1e7_Zqa1_TlFfzx1n51BTUw) |
+| Roberta-wwm-ext-3layers-distill, Chinese | Tensorflow                                                    |
 
 ## Train Detail
 
@@ -30,7 +31,7 @@ To train this model, I used 2 steps.
 
 - I just used 5 different ways to mask one sentence, not dynamic mask.
 
-- Every example just use maximum 20 tokens mask
+- Every example just use maximum 20 token masks
 
 ### Teacher Model
 
@@ -55,22 +56,25 @@ In this part, every task I just ran one time, the result is below.
 
 ### Classification
 
-| Model                                 | AFQMC      | CMNLI     | TNEWS     |
-|:-------------------------------------:|:----------:|:---------:|:---------:|
-| Roberta-wwm-ext-base, Chinese         | 74.04%     | 80.51%    | 56.94%    |
-| Roberta-wwm-ext-base-distill, Chinese | **74.44%** | **81.1%** | **57.6%** |
+| Model                                    | AFQMC      | CMNLI     | TNEWS     |
+|:----------------------------------------:|:----------:|:---------:|:---------:|
+| Roberta-wwm-ext-base, Chinese            | 74.04%     | 80.51%    | 56.94%    |
+| Roberta-wwm-ext-base-distill, Chinese    | **74.44%** | **81.1%** | **57.6%** |
+| Roberta-wwm-ext-3layers-distill, Chinese | 68.8%      | 75.5%     | 55.7%     |
 
-| Model                                 | LCQMC dev | LCQMC test |
-|:-------------------------------------:|:---------:|:----------:|
-| Roberta-wwm-ext-base, Chinese         | 89%       | 86.5%      |
-| Roberta-wwm-ext-base-distill, Chinese | 89%       | **87.2%**  |
+| Model                                    | LCQMC dev | LCQMC test |
+|:----------------------------------------:|:---------:|:----------:|
+| Roberta-wwm-ext-base, Chinese            | 89%       | 86.5%      |
+| Roberta-wwm-ext-base-distill, Chinese    | 89%       | **87.2%**  |
+| Roberta-wwm-ext-3layers-distill, Chinese | 85.1%     | 86%        |
 
 ### SQUAD
 
-| Model                                 | CMRC2018 dev (F1/EM) |
-|:-------------------------------------:|:--------------------:|
-| Roberta-wwm-ext-base, Chinese         | 84.72%/**65.24%**    |
-| Roberta-wwm-ext-base-distill, Chinese | **85.2%**/65.20%     |
+| Model                                    | CMRC2018 dev (F1/EM) |
+|:----------------------------------------:|:--------------------:|
+| Roberta-wwm-ext-base, Chinese            | 84.72%/**65.24%**    |
+| Roberta-wwm-ext-base-distill, Chinese    | **85.2%**/65.20%     |
+| Roberta-wwm-ext-3layers-distill, Chinese | 78.5%/57.4%          |
 
 In this part you could ask, your comparison is different with this [github](https://github.com/ymcui/Chinese-BERT-wwm), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
 
@@ -145,14 +149,16 @@ python run_distill.py \
 ## Answers
 
 - **We need a small size one, your model are still base size.**
-1. The purpose of punish this model is to identify feasibility of ditilled of method.
+1. The purpose of punish this model is to identify feasibility of distilled of method.
 
 2. As you can see, this distilled method can improve the accuracy.
 
 3. So I keep using this method to train a small size one, and I will punish it **around 2020.01.20**.
+- **Why did you punish the 3 layers model?**
+1. Some githuber told me, we need small size one, the bert base version is so large, I can't afford the cost of the server, so I punished the small size one! 
+
+2. You could ask the accuracy of 3 layers model decreased so lot, because I just trained the model once, and I will continue to train this model, if 
 
 ## Thanks
 
-Thanks TFRC supports TPU!
-
-
+Thanks TFRC supports the TPU!
