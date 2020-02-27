@@ -1,4 +1,4 @@
-# A Roberta-ext-wwm-base Distillation Model
+# A Roberta-ext-wwm Distillation Model
 
 This is a chinese Roberta wwm distillation model which was distilled from roberta-ext-wwm-base by roberta-ext-wwm-large. The large model and base model are from this [github](https://github.com/ymcui/Chinese-BERT-wwm), thanks for his contribution.
 
