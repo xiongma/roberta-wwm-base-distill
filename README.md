@@ -70,11 +70,11 @@ In this part, every task I just ran one time, the result is below.
 
 ### SQUAD
 
-| Model                                    | CMRC2018 dev (F1/EM) |
-|:----------------------------------------:|:--------------------:|
-| Roberta-wwm-ext-base, Chinese            | 84.72%/**65.24%**    |
-| Roberta-wwm-ext-base-distill, Chinese    | **85.2%**/65.20%     |
-| Roberta-wwm-ext-3layers-distill, Chinese | 78.5%/57.4%          |
+| Model                                          | CMRC2018 dev (F1/EM) |
+|:----------------------------------------------:|:--------------------:|
+| Roberta-wwm-ext-base, Chinese                  | 84.72%/**65.24%**    |
+| Roberta-wwm-ext-base-distill, Chinese          | **85.2%**/65.20%     |
+| Roberta-wwm-ext-large-3layers-distill, Chinese | 78.5%/57.4%          |
 
 In this part you could ask, your comparison is different with this [github](https://github.com/ymcui/Chinese-BERT-wwm), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
 
