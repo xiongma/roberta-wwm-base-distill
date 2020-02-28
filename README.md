@@ -18,6 +18,7 @@ I just support BaiduYun to down this model, this link is below.
 |:----------------------------------------------:|:------------------------------------------------------------------:|
 | Roberta-wwm-ext-base-distill, Chinese          | [Tensorflow](https://pan.baidu.com/s/1e7_Zqa1_TlFfzx1n51BTUw)      |
 | Roberta-wwm-ext-large-3layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1PO49BumHoXW69w9GUwCsMg) p5kb |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | Uploading                                                          |
 
 ## Train Detail
 
@@ -43,12 +44,11 @@ To train this model, I used 2 steps.
 
 - **Other Parameters**
 
-| Parameter     | Value |
-|:-------------:|:-----:|
-| batch size    | 384   |
-| learning rate | 5e-5  |
-| training step | 1M    |
-| warming step  | 2W    |
+| Parameter                                      | batch size | learning rate | training step | warming step |
+|:----------------------------------------------:|:----------:|:-------------:|:-------------:|:------------:|
+| Roberta-wwm-ext-base-distill, Chinese          | 384        | 5e-5          | 1M            | 2W           |
+| Roberta-wwm-ext-large-3layers-distill, Chinese | 128        | 3e-5          | 3M            | 2.5K         |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | 512        | 8e-5          | 1M            | 5K           |
 
 ## Comparison
 
@@ -61,12 +61,14 @@ In this part, every task I just ran one time, the result is below.
 | Roberta-wwm-ext-base, Chinese                  | 74.04%     | 80.51%    | 56.94%    |
 | Roberta-wwm-ext-base-distill, Chinese          | **74.44%** | **81.1%** | **57.6%** |
 | Roberta-wwm-ext-large-3layers-distill, Chinese | 68.8%      | 75.5%     | 55.7%     |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | 72%        | 79.3%     | 56.7%     |
 
 | Model                                          | LCQMC dev | LCQMC test |
 |:----------------------------------------------:|:---------:|:----------:|
 | Roberta-wwm-ext-base, Chinese                  | 89%       | 86.5%      |
 | Roberta-wwm-ext-base-distill, Chinese          | 89%       | **87.2%**  |
 | Roberta-wwm-ext-large-3layers-distill, Chinese | 85.1%     | 86%        |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | 87.7%     | 86.7%      |
 
 ### SQUAD
 
@@ -75,6 +77,7 @@ In this part, every task I just ran one time, the result is below.
 | Roberta-wwm-ext-base, Chinese                  | 84.72%/**65.24%**    |
 | Roberta-wwm-ext-base-distill, Chinese          | **85.2%**/65.20%     |
 | Roberta-wwm-ext-large-3layers-distill, Chinese | 78.5%/57.4%          |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | 82.6%/61.7%          |
 
 In this part you could ask, your comparison is different with this [github](https://github.com/ymcui/Chinese-BERT-wwm), I don't know why, I just used the original base model to run this task, got the score is up, and I used same parameters and distilled model to run this task, got the score is up. Maybe I used the different parameters. 
 
