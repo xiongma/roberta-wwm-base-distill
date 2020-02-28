@@ -157,9 +157,7 @@ python run_distill.py \
 2. As you can see, this distilled method can improve the accuracy.
 - **Why did you punish the 3 layers model?**
 1. Some githuber told me, we need small size one, the bert base version is so large, I can't afford the cost of the server, so I punished the small size one! 
-- **Future Plan**
-
-- I still trained a 6 layers model, **I will punish it around 2020.01.23**
+- 
 
 ## Thanks
 
