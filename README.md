@@ -17,7 +17,7 @@ I just support BaiduYun to down this model, this link is below.
 | Model                                          | BaiduYun                                                           |
 |:----------------------------------------------:|:------------------------------------------------------------------:|
 | Roberta-wwm-ext-base-distill, Chinese          | [Tensorflow](https://pan.baidu.com/s/1e7_Zqa1_TlFfzx1n51BTUw)      |
-| Roberta-wwm-ext-large-3layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1PO49BumHoXW69w9GUwCsMg) p5kb |
+| Roberta-wwm-ext-large-3layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1XKaqVHrp8y0tHCNK64kpYw) 26hu |
 | Roberta-wwm-ext-large-6layers-distill, Chinese | Uploading                                                          |
 
 ## Train Detail
@@ -157,8 +157,6 @@ python run_distill.py \
 2. As you can see, this distilled method can improve the accuracy.
 - **Why did you punish the 3 layers model?**
 1. Some githuber told me, we need small size one, the bert base version is so large, I can't afford the cost of the server, so I punished the small size one! 
-- 
-
-## Thanks
+- ## Thanks
 
 Thanks TFRC supports the TPU!
