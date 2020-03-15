@@ -158,10 +158,7 @@ python run_distill.py \
 - **Why did you punish the 3 layers model?**
 1. Some githuber told me, we need small size one, the bert base version is so large, I can't afford the cost of the server, so I punished the small size one! 
 - **What's the 6 layers large model download link?**
-
-- Sorry about it, because of the speed of VPN, I tried many time to download the model from Google Cloud, but it still unsuccessful, if I download it successful, I will upload it.
-
-
+1. Sorry about it, because of the speed of VPN, I tried many time to download the model from Google Cloud, but it still unsuccessful, if I download it successful, I will upload it.
 
 ## Thanks
 
