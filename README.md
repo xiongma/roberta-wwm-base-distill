@@ -18,7 +18,7 @@ I just support BaiduYun to down this model, this link is below.
 |:----------------------------------------------:|:------------------------------------------------------------------:|
 | Roberta-wwm-ext-base-distill, Chinese          | [Tensorflow](https://pan.baidu.com/s/1e7_Zqa1_TlFfzx1n51BTUw)      |
 | Roberta-wwm-ext-large-3layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1XKaqVHrp8y0tHCNK64kpYw) 26hu |
-| Roberta-wwm-ext-large-6layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1MlALh3WC71KO0lw-jTCyxw)seou  |
+| Roberta-wwm-ext-large-6layers-distill, Chinese | [Tensorflow](https://pan.baidu.com/s/1MlALh3WC71KO0lw-jTCyxw) seou |
 
 ## Train Detail
 
